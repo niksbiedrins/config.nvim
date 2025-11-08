@@ -33,10 +33,12 @@ return {
         underline = true,
       })
 
-      vim.lsp.config("lua_ls", {})
-      vim.lsp.config("pyright", {})
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      vim.lsp.enable({ "lua_ls", "tsserver" })
+      vim.lsp.config("lua_ls", {capabilities = capabilities})
+      vim.lsp.config("pyright", {capabilities = capabilities})
+
+      vim.lsp.enable({ "lua_ls", "pyright" })
     end,
   },
 }
