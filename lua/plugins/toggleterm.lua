@@ -4,6 +4,7 @@ return {
 		version = "*",
 		config = function()
 			require("toggleterm").setup({
+        shell = "pwsh.exe",
 				open_mapping = [[<C-\>]],
 				direction = "float",
 				size = 20,
